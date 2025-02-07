@@ -1,1 +1,30 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Brush Script MT', cursive; /* Cambiado a Brush Script MT */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
+.typing {
+
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(38, end) forwards, blink-caret 1s step-end infinite; /* Ajustar el número de pasos */
+    animation-fill-mode: forwards;
+    }
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 33.6ch; } /* Ajustar el ancho al número de caracteres */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
