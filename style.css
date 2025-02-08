@@ -1,30 +1,41 @@
-body {
-    background-color: black;
-    color: green;
-    font-family: 'Brush Script MT', cursive; /* Cambiado a Brush Script MT */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
 }
-
-.typing {
-
-    border-right: 2px solid white;
+body{
+  height: calc(100vh - 8em);
+  padding: 4em;
+  color: rgba(255,255,255,.75);
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: rgb(25,25,25);  
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 10em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    width: 0;
-    animation: typing 4s steps(38, end) forwards, blink-caret 1s step-end infinite; /* Ajustar el número de pasos */
-    animation-fill-mode: forwards;
-    }
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 33.6ch; } /* Ajustar el ancho al número de caracteres */
+    transform: translateY(-50%);    
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: white; }
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1s steps(11) 1s 1 normal both,
+             blinkTextCursor 800ms steps(11) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 11ch;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
