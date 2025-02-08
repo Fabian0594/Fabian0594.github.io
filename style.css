@@ -71,3 +71,23 @@ body{
   border: 0.5pt solid #101416;
 }
 
+.searchbar {
+  position: absolute;
+  left: 32%;
+  top: 4px;
+  width: 70vh;
+  height: 22px;
+  background-color: #2C3134;
+  border: 0.5pt solid #484e52;
+  border-radius: 5px;
+}
+
+.explorerbar {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 40px;
+  height: 100%;
+  background-color: #1A2023;
+  border: 0.5pt solid #101416;
+}
