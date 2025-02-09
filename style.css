@@ -41,6 +41,9 @@ body{
   animation: typewriter 1s steps(11) 1s 1 normal both,
              blinkTextCursor 800ms steps(11) infinite normal;
 }
+
+/* Animación de escribir texto */
+
 @keyframes typewriter{
   from{width: 0;}
   to{width: 11ch;}
@@ -147,4 +150,70 @@ body{
   background-color: #2C3134;
 }
 
+/* Botón de abrir ventana */
+.open-btn {
+    background-color: #1A2023;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
+.open-btn:hover {
+    background-color: #2C3134;
+}
+
+/* Modal (ventana emergente) */
+.modal {
+  user-select: none;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Contenido del modal */
+.modal-content {
+  user-select: none;
+  background-color: #1A2023;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Botón de cerrar */
+.close {
+    user-select: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Animación de escribir texto *
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
