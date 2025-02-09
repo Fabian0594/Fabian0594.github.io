@@ -82,19 +82,9 @@ body{
   border-radius: 5px;
 }
 
-.explorerbar {
-  position: absolute;
-  left: 40px;
-  top: 30px;
-  width: 140px;
-  height: 26px;
-  background-color: #1A2023;
-  border: 0.5pt solid #101416;
-}
-
 .menu {
   list-style-type: none;
-  height: 25px;
+  height: 40px; /* Ajustar la altura */
   width: 40px;
   margin: 0;
   padding: 0;
@@ -115,8 +105,9 @@ body{
   justify-content: center;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 5px 10px; /* Ajustar el padding */
   text-decoration: none;
+  font-size: 14px; /* Ajustar el tamaño de la fuente */
 }
 
 .menu li a:hover {
@@ -127,19 +118,26 @@ body{
   display: none;
   position: absolute;
   background-color: #1A2023;
-  width: 160px;
-  height: 50px;
-  left: 100%;
+  width: 180px; /* Ajusta el ancho */
+  left: 100%; /* Se alinea a la derecha */
   top: 0;
   z-index: 1;
+  border: 1px solid #101416;
+  padding: 0;
 }
 
 .submenu a {
+  display: block; /* Hace que el enlace ocupe todo el espacio */
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 10px 15px; /* Ajusta el tamaño del área seleccionable */
+  box-sizing: border-box; /* Evita que el padding desborde */
   color: white;
-  padding: 12px 16px;
   text-decoration: none;
-  display: block;
-  text-align: left;
+  background-color: #1A2023;
+}
+
+.submenu li {
+  width: 100%; /* Asegura que los elementos ocupen todo el ancho */
 }
 
 .submenu a:hover {
